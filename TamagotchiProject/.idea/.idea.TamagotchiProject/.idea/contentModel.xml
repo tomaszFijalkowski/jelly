@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
-      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="Tamagotchi.cs" t="Include" />
+          <e p="ButtonController.cs" t="Include" />
+          <e p="EyeController.cs" t="Include" />
+          <e p="GameController.cs" t="Include" />
+          <e p="HorizonController.cs" t="Include" />
+          <e p="Scripts.asmdef" t="Include" />
+          <e p="StatsController.cs" t="Include" />
+          <e p="TreeController.cs" t="Include" />
         </e>
         <e p="Tests" t="Include">
           <e p="Tests.asmdef" t="Include" />
@@ -15,6 +20,7 @@
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Scripts.csproj" t="IncludeRecursive" />
       <e p="TamagotchiProject.sln" t="IncludeFlat" />
       <e p="Temp" t="ExcludeRecursive">
         <e p="bin" t="ExcludeRecursive" />

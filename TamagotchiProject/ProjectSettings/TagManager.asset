@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - HealthBar
+  - EnergyBar
+  - HungerBar
+  - ThirstBar
+  - AmusementBar
+  - Horizon
   layers:
   - Default
   - TransparentFX
