@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class StatsController : MonoBehaviour
 {    
-    private enum Stats
+    public enum Stats
     {
         Health,
         Energy,
@@ -16,7 +16,7 @@ public class StatsController : MonoBehaviour
         Amusement
     };
 
-    private readonly Dictionary<Stats, int> statistics = new Dictionary<Stats, int>
+    private readonly Dictionary<Stats, int> stats = new Dictionary<Stats, int>
     {
         {Stats.Health, 100},
         {Stats.Energy, 100},
@@ -42,7 +42,7 @@ public class StatsController : MonoBehaviour
     
     private void SetMultiplier()
     {
-        float average = (statistics.Values.Sum() - statistics[Stats.Health]) / (statistics.Count - 1f);
+        float average = (stats.Values.Sum() - stats[Stats.Health]) / (stats.Count - 1f);
         multiplier = Math.Max(0.1f, average / 100f);
     }
 
@@ -73,12 +73,12 @@ public class StatsController : MonoBehaviour
 
             yield return new WaitForSeconds(secondsToWait);
 
-            if (statistics[stat] > 0)
+            if (stats[stat] > 0)
             {
-                statistics[stat] -= 1;
+                stats[stat] -= 1;
             }
 
-            GameObject.FindWithTag(stat + "Bar").GetComponent<Slider>().value = statistics[stat];
+            GameObject.FindWithTag(stat + "Bar").GetComponent<Slider>().value = stats[stat];
         }
     }
 }

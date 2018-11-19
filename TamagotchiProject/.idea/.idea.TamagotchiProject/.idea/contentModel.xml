@@ -4,6 +4,7 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
+          <e p="ActionButtonController.cs" t="Include" />
           <e p="ButtonController.cs" t="Include" />
           <e p="EyeController.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
