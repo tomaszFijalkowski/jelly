@@ -8,6 +8,8 @@
           <e p="EyeController.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
           <e p="HorizonController.cs" t="Include" />
+          <e p="InfoTextController.cs" t="Include" />
+          <e p="PieMenuController.cs" t="Include" />
           <e p="Scripts.asmdef" t="Include" />
           <e p="StatsController.cs" t="Include" />
           <e p="TreeController.cs" t="Include" />

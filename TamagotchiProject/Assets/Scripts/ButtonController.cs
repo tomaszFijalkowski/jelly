@@ -7,7 +7,7 @@ public class ButtonController : MonoBehaviour
     [SerializeField] private Animation buttonAnimation;
 
     public void ButtonEnter()
-    {
+    {        
         if (!buttonAnimation.IsPlaying("ButtonDoubleTempoIdle"))
         {
             buttonAnimation.Play("ButtonEnter");
@@ -15,10 +15,10 @@ public class ButtonController : MonoBehaviour
     }
     
     public void ButtonExit()
-    {
+    {        
         if (!buttonAnimation.IsPlaying("ButtonDoubleTempoIdle"))
         {
-        buttonAnimation.Play("ButtonExit");
+            buttonAnimation.Play("ButtonExit");
         }
     }
 

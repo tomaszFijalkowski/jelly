@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class StatsController : MonoBehaviour
-{
+{    
     private enum Stats
     {
         Health,
@@ -39,7 +39,7 @@ public class StatsController : MonoBehaviour
     {
         SetMultiplier();
     }
-
+    
     private void SetMultiplier()
     {
         float average = (statistics.Values.Sum() - statistics[Stats.Health]) / (statistics.Count - 1f);
