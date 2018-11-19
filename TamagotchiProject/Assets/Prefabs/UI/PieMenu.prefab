@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 111626190394877660}
   - component: {fileID: 114548391888440526}
   m_Layer: 0
-  m_Name: PieMenu 1
+  m_Name: PieMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

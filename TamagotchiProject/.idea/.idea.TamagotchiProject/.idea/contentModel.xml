@@ -10,6 +10,8 @@
           <e p="GameController.cs" t="Include" />
           <e p="HorizonController.cs" t="Include" />
           <e p="InfoTextController.cs" t="Include" />
+          <e p="MainMenu.cs" t="Include" />
+          <e p="MainMenuButton.cs" t="Include" />
           <e p="PieMenuController.cs" t="Include" />
           <e p="Scripts.asmdef" t="Include" />
           <e p="StatsController.cs" t="Include" />
