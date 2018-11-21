@@ -10,6 +10,7 @@ TagManager:
   - ThirstBar
   - AmusementBar
   - Horizon
+  - PieMenuButton
   layers:
   - Default
   - TransparentFX

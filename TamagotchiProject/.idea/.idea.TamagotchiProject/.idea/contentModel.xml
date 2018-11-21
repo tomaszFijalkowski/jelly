@@ -4,18 +4,17 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="ActionButtonController.cs" t="Include" />
-          <e p="ButtonController.cs" t="Include" />
-          <e p="EyeController.cs" t="Include" />
+          <e p="Button.cs" t="Include" />
+          <e p="Eye.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
-          <e p="HorizonController.cs" t="Include" />
-          <e p="InfoTextController.cs" t="Include" />
+          <e p="Horizon.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
-          <e p="MainMenuButton.cs" t="Include" />
-          <e p="PieMenuController.cs" t="Include" />
+          <e p="PieMenu.cs" t="Include" />
+          <e p="SceneController.cs" t="Include" />
           <e p="Scripts.asmdef" t="Include" />
           <e p="StatsController.cs" t="Include" />
-          <e p="TreeController.cs" t="Include" />
+          <e p="ToolTip.cs" t="Include" />
+          <e p="Tree.cs" t="Include" />
         </e>
         <e p="Tests" t="Include">
           <e p="Tests.asmdef" t="Include" />

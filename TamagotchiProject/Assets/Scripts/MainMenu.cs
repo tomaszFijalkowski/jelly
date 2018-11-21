@@ -1,26 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject transitionPanel;
+    [SerializeField] private GameObject sceneControllerGameObject;
+
+    private SceneController sceneController;
+
+    private void Start()
+    {
+        sceneController = sceneControllerGameObject.GetComponent<SceneController>();
+    }
 
     public void Play()
     {
-        transitionPanel.GetComponent<Animator>().Play("SceneEnd");
-        StartCoroutine(SwitchScene());
+        sceneController.SwitchScene("MainScene");
     }
 
     public void Quit()
     {
         Application.Quit();
-    }
-
-    private IEnumerator SwitchScene()
-    {
-        yield return new WaitForSeconds(0.25f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

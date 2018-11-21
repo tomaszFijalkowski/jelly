@@ -6,8 +6,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class StatsController : MonoBehaviour
-{    
-    public enum Stats
+{
+    private enum Stats
     {
         Health,
         Energy,
@@ -25,24 +25,22 @@ public class StatsController : MonoBehaviour
         {Stats.Amusement, 100}
     };
 
-    private HorizonController horizon;
-    private bool isAlive = true;
+    private bool isAlive = true; // could be used later
     private float multiplier = 1f;
 
-    void Start()
+    private void Start()
     {
-        horizon = GameObject.FindWithTag("Horizon").GetComponent<HorizonController>();
         StartStatsDecrease();
     }
 
-    void Update()
+    private void Update()
     {
         SetMultiplier();
     }
-    
+
     private void SetMultiplier()
     {
-        float average = (stats.Values.Sum() - stats[Stats.Health]) / (stats.Count - 1f);
+        var average = (stats.Values.Sum() - stats[Stats.Health]) / (stats.Count - 1f);
         multiplier = Math.Max(0.1f, average / 100f);
     }
 
@@ -55,22 +53,12 @@ public class StatsController : MonoBehaviour
         StartCoroutine(DecreaseStat(Stats.Amusement, 0.2f));
     }
 
-    IEnumerator DecreaseStat(Stats stat, float repeatRate)
+    private IEnumerator DecreaseStat(Stats stat, float repeatRate)
     {
         while (isAlive)
         {
-            float secondsToWait = repeatRate;
-
-            switch (stat)
-            {
-                case Stats.Health:
-                    secondsToWait = repeatRate * multiplier;
-                    break;
-                case Stats.Energy:
-                    secondsToWait = horizon.IsNight() ? repeatRate / 2f : repeatRate;
-                    break;
-            }
-
+            var secondsToWait = stat == Stats.Health ? repeatRate * multiplier : repeatRate;
+            
             yield return new WaitForSeconds(secondsToWait);
 
             if (stats[stat] > 0)
@@ -78,7 +66,7 @@ public class StatsController : MonoBehaviour
                 stats[stat] -= 1;
             }
 
-            GameObject.FindWithTag(stat + "Bar").GetComponent<Slider>().value = stats[stat];
+            GameObject.FindWithTag(stat + "Bar").GetComponent<Slider>().value = stats[stat]; // could be optimized
         }
     }
 }

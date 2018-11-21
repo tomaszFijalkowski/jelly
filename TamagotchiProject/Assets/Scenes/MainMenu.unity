@@ -203,45 +203,47 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 18516024}
   m_CullTransparentMesh: 0
---- !u!1 &190938444
+--- !u!1 &129285178
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 190938446}
-  - component: {fileID: 190938445}
+  - component: {fileID: 129285180}
+  - component: {fileID: 129285179}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: SceneController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &190938445
+--- !u!114 &129285179
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 190938444}
+  m_GameObject: {fileID: 129285178}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6559b7af61af84406841d665a6569cd1, type: 3}
+  m_Script: {fileID: 11500000, guid: d7e2fc0e50e474132967896863471c35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &190938446
+  transitionPanelGameObject: {fileID: 1821029248}
+  mainCameraGameObject: {fileID: 519420028}
+--- !u!4 &129285180
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 190938444}
+  m_GameObject: {fileID: 129285178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 961.36584, y: 456.36584, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &192492568
 GameObject:
@@ -254,10 +256,10 @@ GameObject:
   - component: {fileID: 192492571}
   - component: {fileID: 192492570}
   - component: {fileID: 192492572}
-  - component: {fileID: 192492573}
-  - component: {fileID: 192492574}
-  - component: {fileID: 192492575}
   - component: {fileID: 192492576}
+  - component: {fileID: 192492574}
+  - component: {fileID: 192492573}
+  - component: {fileID: 192492575}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -375,22 +377,24 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!111 &192492573
-Animation:
+--- !u!95 &192492573
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 192492568}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: f32fb6e29c02d42cb9f515d2a821870a, type: 2}
-  - {fileID: 7400000, guid: 0faf6a33c22b74aa08ede79a87d723bc, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1c1c0cec531ca47bf9be33d928c89d54, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &192492574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -408,14 +412,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 192492575}
-          m_MethodName: MenuButtonEnter
-          m_Mode: 1
+          m_MethodName: PlayButtonAnimation
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: MenuButtonEnter
             m_BoolArgument: 0
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
@@ -425,14 +429,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 192492575}
-          m_MethodName: MenuButtonExit
-          m_Mode: 1
+          m_MethodName: PlayButtonAnimation
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: MenuButtonExit
             m_BoolArgument: 0
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
@@ -446,7 +450,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 192492568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6f00bb102e8245e4bd6fcad0d848f62, type: 3}
+  m_Script: {fileID: 11500000, guid: 446ae8591066c43a9a6c905270db355e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &192492576
@@ -709,7 +713,7 @@ Transform:
   m_LocalScale: {x: 3, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390575326
 GameObject:
@@ -1106,7 +1110,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1232,7 +1236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d1dabb0aa1842d0a2a7fc415003424, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionPanel: {fileID: 1821029248}
+  sceneControllerGameObject: {fileID: 129285178}
 --- !u!1 &656748034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,7 +1381,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4914844915878884, guid: 91b5e531037544bf5b03d36713ba71b1, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1458490834810954, guid: 91b5e531037544bf5b03d36713ba71b1, type: 2}
       propertyPath: m_Name
@@ -1585,10 +1589,10 @@ GameObject:
   - component: {fileID: 2090680373}
   - component: {fileID: 2090680372}
   - component: {fileID: 2090680371}
-  - component: {fileID: 2090680370}
-  - component: {fileID: 2090680369}
-  - component: {fileID: 2090680368}
   - component: {fileID: 2090680374}
+  - component: {fileID: 2090680369}
+  - component: {fileID: 2090680370}
+  - component: {fileID: 2090680368}
   m_Layer: 5
   m_Name: Quit
   m_TagString: Untagged
@@ -1622,7 +1626,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2090680366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6f00bb102e8245e4bd6fcad0d848f62, type: 3}
+  m_Script: {fileID: 11500000, guid: 446ae8591066c43a9a6c905270db355e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2090680369
@@ -1642,14 +1646,14 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2090680368}
-          m_MethodName: MenuButtonEnter
-          m_Mode: 1
+          m_MethodName: PlayButtonAnimation
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: MenuButtonEnter
             m_BoolArgument: 0
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
@@ -1659,35 +1663,37 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 2090680368}
-          m_MethodName: MenuButtonExit
-          m_Mode: 1
+          m_MethodName: PlayButtonAnimation
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: MenuButtonExit
             m_BoolArgument: 0
           m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   delegates: []
---- !u!111 &2090680370
-Animation:
+--- !u!95 &2090680370
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2090680366}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 0}
-  m_Animations:
-  - {fileID: 7400000, guid: f32fb6e29c02d42cb9f515d2a821870a, type: 2}
-  - {fileID: 7400000, guid: 0faf6a33c22b74aa08ede79a87d723bc, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1c1c0cec531ca47bf9be33d928c89d54, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2090680371
 MonoBehaviour:
   m_ObjectHideFlags: 0
