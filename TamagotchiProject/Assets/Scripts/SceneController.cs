@@ -21,7 +21,7 @@ public class SceneController : MonoBehaviour
     {
         ResetGameState();
         transitionPanelAnimator.Play("SceneFadeOut");
-        
+
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
             mainCameraAnimator.SetTrigger("CameraZoomIn");

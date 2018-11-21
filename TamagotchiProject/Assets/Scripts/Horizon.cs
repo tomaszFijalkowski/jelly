@@ -8,7 +8,7 @@ public class Horizon : MonoBehaviour
     [SerializeField] private GameObject moonGameObject;
 
     [SerializeField] private GameObject dayCounterGameObject;
-    
+
     [SerializeField] private ParticleSystem stars;
 
     private Animation sunAnimation;

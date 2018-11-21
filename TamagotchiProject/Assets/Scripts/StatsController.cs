@@ -58,7 +58,7 @@ public class StatsController : MonoBehaviour
         while (isAlive)
         {
             var secondsToWait = stat == Stats.Health ? repeatRate * multiplier : repeatRate;
-            
+
             yield return new WaitForSeconds(secondsToWait);
 
             if (stats[stat] > 0)

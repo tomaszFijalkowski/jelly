@@ -21,4 +21,5 @@ public class Button : MonoBehaviour
     {
         buttonAnimator.Play(GameController.DoubleTempo ? "HudButtonDoubleTempo" : "HudButtonEnter");
     }
+    
 }

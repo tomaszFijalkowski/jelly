@@ -9,7 +9,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private GameObject pieMenuGameObject;
 
-    [SerializeField] private GameObject toolTipGameObject;
+    [SerializeField] private GameObject innerAreaGameObject;
 
     private Transform[] pauseMenuElements;
     private PieMenu pieMenu;
@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
     private void Start()
     {
         pieMenu = pieMenuGameObject.GetComponent<PieMenu>();
-        toolTip = toolTipGameObject.GetComponent<ToolTip>();
+        toolTip = innerAreaGameObject.GetComponent<ToolTip>();
         pauseMenuElements = pauseMenuGameObject.GetComponentsInChildren<Transform>();
     }
 
