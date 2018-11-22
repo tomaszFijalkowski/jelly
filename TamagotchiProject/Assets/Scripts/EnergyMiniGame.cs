@@ -5,6 +5,7 @@ public class EnergyMiniGame : MonoBehaviour
 {
     [SerializeField] private GameObject ghostPrefab;
     [SerializeField] private GameObject pieMenuGameObject;
+    [SerializeField] private GameObject preventNightmaresPrefab;
 
     private PieMenu pieMenu;
     private GameObject[] eyes;
@@ -66,9 +67,10 @@ public class EnergyMiniGame : MonoBehaviour
         const float spawnRate = 1f;
         const float startDelay = 0.5f;
 
-        yield return new WaitForSeconds(startDelay);
-
         var center = transform.position;
+
+        yield return new WaitForSeconds(startDelay);
+        Instantiate(preventNightmaresPrefab, transform.position, Quaternion.identity);
 
         for (var i = 0; i < NumberOfGhosts; i++)
         {

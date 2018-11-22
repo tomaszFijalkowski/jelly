@@ -348,7 +348,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 255307821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.27, y: -1.05, z: 1}
+  m_LocalPosition: {x: -7.8, y: -1.05, z: 1}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children:
   - {fileID: 712396993}
@@ -405,6 +405,18 @@ Prefab:
       propertyPath: pieMenuGameObject
       value: 
       objectReference: {fileID: 51021831}
+    - target: {fileID: 114556892727308116, guid: 221098b89a5144d1b9f75ac935e073b4,
+        type: 2}
+      propertyPath: preventNightmaresPrefab
+      value: 
+      objectReference: {fileID: 1424227665193626, guid: 46fd4066fb7c548e5902da9a13362992,
+        type: 2}
+    - target: {fileID: 114556892727308116, guid: 221098b89a5144d1b9f75ac935e073b4,
+        type: 2}
+      propertyPath: ghostPrefab
+      value: 
+      objectReference: {fileID: 1571417811171568, guid: 5abd48911ece04e8d995a24131b256d2,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 221098b89a5144d1b9f75ac935e073b4, type: 2}
   m_IsPrefabAsset: 0
@@ -1682,6 +1694,52 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1368522624259606, guid: 36fd3d3c7c9e047c0841015b321e156e,
     type: 2}
   m_PrefabInternal: {fileID: 1300486830}
+--- !u!1001 &1316411859
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4541258510186138, guid: 5abd48911ece04e8d995a24131b256d2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541258510186138, guid: 5abd48911ece04e8d995a24131b256d2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541258510186138, guid: 5abd48911ece04e8d995a24131b256d2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541258510186138, guid: 5abd48911ece04e8d995a24131b256d2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541258510186138, guid: 5abd48911ece04e8d995a24131b256d2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541258510186138, guid: 5abd48911ece04e8d995a24131b256d2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541258510186138, guid: 5abd48911ece04e8d995a24131b256d2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541258510186138, guid: 5abd48911ece04e8d995a24131b256d2, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1571417811171568, guid: 5abd48911ece04e8d995a24131b256d2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5abd48911ece04e8d995a24131b256d2, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!224 &1395800972 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224954197065615770, guid: f98f6c7ce82434244b81b010ac50bb5b,
@@ -1926,6 +1984,41 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114809283765934156, guid: 208dd114bfb614c93acfe8e0ae2b910b,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2218017}
+    - target: {fileID: 114247350369034896, guid: 208dd114bfb614c93acfe8e0ae2b910b,
+        type: 2}
+      propertyPath: toolTipGameObject
+      value: 
+      objectReference: {fileID: 1795766850}
+    - target: {fileID: 114381540965326076, guid: 208dd114bfb614c93acfe8e0ae2b910b,
+        type: 2}
+      propertyPath: toolTipGameObject
+      value: 
+      objectReference: {fileID: 1795766850}
+    - target: {fileID: 114827262981792110, guid: 208dd114bfb614c93acfe8e0ae2b910b,
+        type: 2}
+      propertyPath: toolTipGameObject
+      value: 
+      objectReference: {fileID: 1795766850}
+    - target: {fileID: 114939234105637150, guid: 208dd114bfb614c93acfe8e0ae2b910b,
+        type: 2}
+      propertyPath: toolTipGameObject
+      value: 
+      objectReference: {fileID: 1795766850}
+    - target: {fileID: 114191019001813006, guid: 208dd114bfb614c93acfe8e0ae2b910b,
+        type: 2}
+      propertyPath: toolTipGameObject
+      value: 
+      objectReference: {fileID: 1795766850}
+    - target: {fileID: 114741398392180034, guid: 208dd114bfb614c93acfe8e0ae2b910b,
+        type: 2}
+      propertyPath: toolTipGameObject
+      value: 
+      objectReference: {fileID: 1795766850}
     - target: {fileID: 114745057221609010, guid: 208dd114bfb614c93acfe8e0ae2b910b,
         type: 2}
       propertyPath: darkBackgroundGameObject
@@ -1936,45 +2029,16 @@ Prefab:
       propertyPath: toolTipGameObject
       value: 
       objectReference: {fileID: 1795766850}
-    - target: {fileID: 114741398392180034, guid: 208dd114bfb614c93acfe8e0ae2b910b,
+    - target: {fileID: 114745057221609010, guid: 208dd114bfb614c93acfe8e0ae2b910b,
         type: 2}
-      propertyPath: toolTipGameObject
+      propertyPath: gameControllerGameObject
       value: 
-      objectReference: {fileID: 1795766850}
-    - target: {fileID: 114191019001813006, guid: 208dd114bfb614c93acfe8e0ae2b910b,
+      objectReference: {fileID: 190938444}
+    - target: {fileID: 114745057221609010, guid: 208dd114bfb614c93acfe8e0ae2b910b,
         type: 2}
-      propertyPath: toolTipGameObject
+      propertyPath: tempoButtonGameObject
       value: 
-      objectReference: {fileID: 1795766850}
-    - target: {fileID: 114939234105637150, guid: 208dd114bfb614c93acfe8e0ae2b910b,
-        type: 2}
-      propertyPath: toolTipGameObject
-      value: 
-      objectReference: {fileID: 1795766850}
-    - target: {fileID: 114827262981792110, guid: 208dd114bfb614c93acfe8e0ae2b910b,
-        type: 2}
-      propertyPath: toolTipGameObject
-      value: 
-      objectReference: {fileID: 1795766850}
-    - target: {fileID: 114381540965326076, guid: 208dd114bfb614c93acfe8e0ae2b910b,
-        type: 2}
-      propertyPath: toolTipGameObject
-      value: 
-      objectReference: {fileID: 1795766850}
-    - target: {fileID: 114247350369034896, guid: 208dd114bfb614c93acfe8e0ae2b910b,
-        type: 2}
-      propertyPath: toolTipGameObject
-      value: 
-      objectReference: {fileID: 1795766850}
-    - target: {fileID: 114809283765934156, guid: 208dd114bfb614c93acfe8e0ae2b910b,
-        type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 2218017}
-    - target: {fileID: 1746657691891518, guid: 208dd114bfb614c93acfe8e0ae2b910b, type: 2}
-      propertyPath: m_Name
-      value: PieMenu
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2073875571}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 208dd114bfb614c93acfe8e0ae2b910b, type: 2}
   m_IsPrefabAsset: 0
@@ -2087,7 +2151,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1584688269757616, guid: f98f6c7ce82434244b81b010ac50bb5b, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f98f6c7ce82434244b81b010ac50bb5b, type: 2}
@@ -2274,6 +2338,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4126de94e451e479d94ad46528c313dc, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2073875571 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1102886093389068, guid: 4126de94e451e479d94ad46528c313dc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1997056814}
 --- !u!224 &2090365790 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 224603821014872022, guid: 4126de94e451e479d94ad46528c313dc,

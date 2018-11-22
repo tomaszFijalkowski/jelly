@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem ghostRemains;
     [SerializeField] private GameObject nightBonusPrefab;
     [SerializeField] private GameObject minus10EnergyPrefab;
     [SerializeField] private GameObject plus10EnergyPrefab;
@@ -65,6 +66,7 @@ public class Ghost : MonoBehaviour
             GainEnergy();
             ghostAnimator.SetTrigger("GhostDeath");
             StartCoroutine(DestroyGhost());
+            ghostRemains.Emit(Random.Range(3, 6));
         }
     }
 
@@ -75,12 +77,14 @@ public class Ghost : MonoBehaviour
         if (horizon.IsNight())
         {
             statsController.ChangeStats(StatsController.Stats.Energy, 20);
+            // todo NEED TO CLEAR THEM FROM SCENE AFTER SOME TIME
             Instantiate(plus20EnergyPrefab, position, Quaternion.identity);
             StartCoroutine(ShowNightBonus(position));
         }
         else
         {
             statsController.ChangeStats(StatsController.Stats.Energy, 10);
+            // todo NEED TO CLEAR THEM FROM SCENE AFTER SOME TIME
             Instantiate(plus10EnergyPrefab, position, Quaternion.identity);
         }
     }
@@ -88,6 +92,7 @@ public class Ghost : MonoBehaviour
     private void LoseEnergy()
     {
         statsController.ChangeStats(StatsController.Stats.Energy, -10);
+        // todo NEED TO CLEAR THEM FROM SCENE AFTER SOME TIME
         Instantiate(minus10EnergyPrefab, transform.position, Quaternion.identity);
     }
 

@@ -11,11 +11,17 @@ public class PieMenu : MonoBehaviour
 
     [SerializeField] private GameObject toolTipGameObject;
 
+    [SerializeField] private GameObject gameControllerGameObject;
+
+    [SerializeField] private GameObject tempoButtonGameObject;
+
     private List<Image> pieMenuImages;
     private Animator pieMenuAnimator;
     private Animator toolTipAnimator;
     private Animator darkBackgroundAnimator;
     private SpriteRenderer darkBackgroundSpriteRenderer;
+    private GameController gameController;
+    private Animator tempoButtonAnimator;
 
     private bool pieMenuActive;
     private bool actionModeOn;
@@ -27,6 +33,8 @@ public class PieMenu : MonoBehaviour
         toolTipAnimator = toolTipGameObject.GetComponent<Animator>();
         darkBackgroundAnimator = darkBackgroundGameObject.GetComponent<Animator>();
         darkBackgroundSpriteRenderer = darkBackgroundGameObject.GetComponent<SpriteRenderer>();
+        gameController = gameControllerGameObject.GetComponent<GameController>();
+        tempoButtonAnimator = tempoButtonGameObject.GetComponent<Animator>();
 
         foreach (var button in GameObject.FindGameObjectsWithTag("PieMenuButton"))
         {
@@ -55,7 +63,7 @@ public class PieMenu : MonoBehaviour
     public void EnableActionMode(string animationName)
     {
         toolTipAnimator.Play("ToolTipQuickFade");
-
+        
         foreach (var image in pieMenuImages)
         {
             image.raycastTarget = false;
@@ -64,6 +72,12 @@ public class PieMenu : MonoBehaviour
         hoverAreasGameObject.SetActive(false);
         pieMenuAnimator.Play(animationName);
         pieMenuActive = false;
+        
+        if (GameController.DoubleTempo)
+        {
+            gameController.ChangeTempo();
+            tempoButtonAnimator.Play("HudButtonExit");
+        }
     }
 
     public void DisableActionMode()
