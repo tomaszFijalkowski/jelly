@@ -9,16 +9,16 @@ public class GameController : MonoBehaviour
 
     [SerializeField] private GameObject pieMenuGameObject;
 
-    [SerializeField] private GameObject innerAreaGameObject;
+    [SerializeField] private GameObject toolTipGameObject;
 
     private Transform[] pauseMenuElements;
     private PieMenu pieMenu;
-    private ToolTip toolTip;
+    private Animator toolTipAnimator;
 
     private void Start()
     {
         pieMenu = pieMenuGameObject.GetComponent<PieMenu>();
-        toolTip = innerAreaGameObject.GetComponent<ToolTip>();
+        toolTipAnimator = toolTipGameObject.GetComponent<Animator>();
         pauseMenuElements = pauseMenuGameObject.GetComponentsInChildren<Transform>();
     }
 
@@ -57,7 +57,11 @@ public class GameController : MonoBehaviour
         Time.timeScale = 0f;
         pauseMenuGameObject.SetActive(true);
         pieMenu.HidePieMenu();
-        toolTip.ElementExit();
+
+        if (!toolTipAnimator.GetCurrentAnimatorStateInfo(0).IsName("ToolTipFade"))
+        {
+            toolTipAnimator.Play("ToolTipQuickFade");
+        }
     }
 
     private void UnPause()

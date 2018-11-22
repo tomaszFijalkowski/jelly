@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class StatsController : MonoBehaviour
 {
-    private enum Stats
+    public enum Stats
     {
         Health,
         Energy,
@@ -38,6 +38,18 @@ public class StatsController : MonoBehaviour
         SetMultiplier();
     }
 
+    public void ChangeStats(Stats stat, int value)
+    {
+        stats[stat] += value;
+        stats[stat] = Mathf.Clamp(stats[stat], 0, 100);
+        UpdateStatBar(stat);
+    }
+
+    private void UpdateStatBar(Stats stat)
+    {
+        GameObject.FindWithTag(stat + "Bar").GetComponent<Slider>().value = stats[stat]; // could be optimized
+    }
+
     private void SetMultiplier()
     {
         var average = (stats.Values.Sum() - stats[Stats.Health]) / (stats.Count - 1f);
@@ -66,7 +78,7 @@ public class StatsController : MonoBehaviour
                 stats[stat] -= 1;
             }
 
-            GameObject.FindWithTag(stat + "Bar").GetComponent<Slider>().value = stats[stat]; // could be optimized
+            UpdateStatBar(stat);
         }
     }
 }

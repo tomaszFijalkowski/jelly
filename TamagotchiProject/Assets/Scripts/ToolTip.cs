@@ -19,7 +19,7 @@ public class ToolTip : MonoBehaviour
     public void ElementEnter()
     {
         toolTipText.text = label;
-        toolTipAnimator.Play("ToolTipShow");
+        toolTipAnimator.SetTrigger("ToolTipShow");
     }
 
     public void ElementExit()

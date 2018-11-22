@@ -5,8 +5,10 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Button.cs" t="Include" />
+          <e p="EnergyMiniGame.cs" t="Include" />
           <e p="Eye.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
+          <e p="Ghost.cs" t="Include" />
           <e p="Horizon.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="PieMenu.cs" t="Include" />

@@ -11,6 +11,10 @@ TagManager:
   - AmusementBar
   - Horizon
   - PieMenuButton
+  - Stats
+  - NightBonus
+  - EnergyMiniGame
+  - Eye
   layers:
   - Default
   - TransparentFX

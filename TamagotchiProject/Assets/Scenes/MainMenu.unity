@@ -1425,6 +1425,14 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 1952189804876826, guid: 91b5e531037544bf5b03d36713ba71b1, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540980571687338, guid: 91b5e531037544bf5b03d36713ba71b1, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114569695100008122, guid: 91b5e531037544bf5b03d36713ba71b1, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 91b5e531037544bf5b03d36713ba71b1, type: 2}

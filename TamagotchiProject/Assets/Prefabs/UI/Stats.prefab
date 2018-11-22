@@ -524,6 +524,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224826369866693620}
+  - component: {fileID: 114474365893900166}
   m_Layer: 5
   m_Name: Stats
   m_TagString: Untagged
@@ -875,6 +876,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toolTipGameObject: {fileID: 0}
   label: Amusement
+--- !u!114 &114474365893900166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1988860795275432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1557557575582485cb2e47837fd71294, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114494182993181156
 MonoBehaviour:
   m_ObjectHideFlags: 1
