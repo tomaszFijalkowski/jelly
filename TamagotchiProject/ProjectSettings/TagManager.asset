@@ -15,6 +15,7 @@ TagManager:
   - NightBonus
   - EnergyMiniGame
   - Eye
+  - Blade
   layers:
   - Default
   - TransparentFX

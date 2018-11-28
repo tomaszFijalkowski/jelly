@@ -4,19 +4,35 @@
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="Button.cs" t="Include" />
-          <e p="EnergyMiniGame.cs" t="Include" />
-          <e p="Eye.cs" t="Include" />
-          <e p="GameController.cs" t="Include" />
-          <e p="Ghost.cs" t="Include" />
-          <e p="Horizon.cs" t="Include" />
-          <e p="MainMenu.cs" t="Include" />
-          <e p="PieMenu.cs" t="Include" />
-          <e p="SceneController.cs" t="Include" />
+          <e p="Controllers" t="Include">
+            <e p="GameController.cs" t="Include" />
+            <e p="SceneController.cs" t="Include" />
+            <e p="StatsController.cs" t="Include" />
+          </e>
+          <e p="EnergyMiniGame" t="Include">
+            <e p="EnergyMiniGame.cs" t="Include" />
+            <e p="Ghost.cs" t="Include" />
+            <e p="GhostSpawner.cs" t="Include" />
+          </e>
+          <e p="HungerMiniGame" t="Include">
+            <e p="Blade.cs" t="Include" />
+            <e p="Fruit.cs" t="Include" />
+            <e p="FruitSliced.cs" t="Include" />
+            <e p="FruitSpawner.cs" t="Include" />
+            <e p="HungerMiniGame.cs" t="Include" />
+          </e>
           <e p="Scripts.asmdef" t="Include" />
-          <e p="StatsController.cs" t="Include" />
-          <e p="ToolTip.cs" t="Include" />
-          <e p="Tree.cs" t="Include" />
+          <e p="UI" t="Include">
+            <e p="Button.cs" t="Include" />
+            <e p="MainMenu.cs" t="Include" />
+            <e p="PieMenu.cs" t="Include" />
+            <e p="ToolTip.cs" t="Include" />
+          </e>
+          <e p="World" t="Include">
+            <e p="Eye.cs" t="Include" />
+            <e p="Horizon.cs" t="Include" />
+            <e p="Tree.cs" t="Include" />
+          </e>
         </e>
         <e p="Tests" t="Include">
           <e p="Tests.asmdef" t="Include" />
