@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3ebdd980-b6bc-4e2d-b0fd-18306d182eda" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../showcase/eating.gif" beforeDir="false" afterPath="$PROJECT_DIR$/../showcase/eating.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../showcase/sleeping.gif" beforeDir="false" afterPath="$PROJECT_DIR$/../showcase/sleeping.gif" afterDir="false" />
-    </list>
+    <list default="true" id="3ebdd980-b6bc-4e2d-b0fd-18306d182eda" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,8 +264,8 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="y" value="24" />
     <option name="width" value="1680" />
     <option name="height" value="960" />
   </component>
@@ -389,7 +386,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="960" extended-state="0" />
+    <frame x="0" y="24" width="1680" height="960" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
