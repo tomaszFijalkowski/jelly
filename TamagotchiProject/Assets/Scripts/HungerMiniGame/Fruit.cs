@@ -26,17 +26,26 @@ namespace HungerMiniGame
         {
             if (col.CompareTag("Blade"))
             {
-                var splash = Instantiate(watermelonSplashGameObject, transform.position, transform.rotation);
-                splash.Emit(Random.Range(30, 60));
-                Destroy(splash, 1f); // TODO this doesn't work for some reason (MEMORY LEAK)
-
-                var rotZ = Mathf.Atan2(blade.MouseDirection.y, blade.MouseDirection.x) * Mathf.Rad2Deg;
-                var rotation = Quaternion.Euler(0f, 0f, rotZ - 90f);
-                var fruitSlice = Instantiate(fruitSlicedPrefab, transform.position, rotation);
-                Destroy(fruitSlice, 5f);
+                MakeSplash();
+                SliceFruit();
                 GainHunger();
                 Destroy(gameObject);
             }
+        }
+
+        private void MakeSplash()
+        {
+            var splash = Instantiate(watermelonSplashGameObject, transform.position, transform.rotation);
+            splash.Emit(Random.Range(30, 60));
+            Destroy(splash, 1f); // TODO this doesn't work for some reason (MEMORY LEAK)
+        }
+
+        private void SliceFruit()
+        {
+            var rotZ = Mathf.Atan2(blade.MouseDirection.y, blade.MouseDirection.x) * Mathf.Rad2Deg;
+            var rotation = Quaternion.Euler(0f, 0f, rotZ - 90f);
+            var fruitSlice = Instantiate(fruitSlicedPrefab, transform.position, rotation);
+            Destroy(fruitSlice, 5f);
         }
 
         private void GainHunger()
